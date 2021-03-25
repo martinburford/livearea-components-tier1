@@ -1,8 +1,9 @@
 {
   "name": "@livearea/components-tier1",
   "version": "1.0.0",
-  "description": "",
-  "main": "",
+  "description": "Description - tier1",
+  "main": "esm.js",
+  "module": "esm.js",
   "scripts": {
     "**** WEBPACK BUILDS ****": "",
     "client": "cross-env NODE_ENV=client webpack",
