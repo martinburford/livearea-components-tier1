@@ -1,13 +1,12 @@
 import Classnames from "classnames/bind";
+import PropTypes from "prop-types";
 import React from "react";
+
 
 // Styles
 import styles from "./tooltip.module.scss";
 
-// Types
-import { ITooltip } from "./tooltip.types";
-
-export const Tooltip: React.FC<ITooltip> = ({ children, style }) => {
+export default function Tooltip({ children, style }){
   // Bind classnames to the components CSS module object in order to access its modular styles
   const cx = Classnames.bind(styles);
   const classnames = cx({
@@ -24,4 +23,9 @@ export const Tooltip: React.FC<ITooltip> = ({ children, style }) => {
   );
 };
 
-export default Tooltip;
+Tooltip.propTypes = {
+  /** Children description */
+  children: PropTypes.element,
+  /** Style description */
+  style: PropTypes.oneOf(["default","error","success"])
+};
